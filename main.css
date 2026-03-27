@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Jost;
+    src: url(fonts/Jost-Regular.ttf);
+}
+
+body {
+    background-color: rgb(50, 50, 50);
+    font-family: Jost;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-weight: 500;
+}
+
+.card {
+    background-color: rgb(38, 38, 38);
+    width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(4, 4, 4, 0.1);
+    text-align: center;
+}
+
+a, h1, p, li {
+    color:blanchedalmond;
+    text-align: left;
+    transition: color 0.2s ease;
+}
+
+img {
+    width: 18px;
+    vertical-align: -3px;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+img:hover {
+    transform: scale(1.1);
+}
+img:active {
+    transform: scale(1.2);
+}
+
+a:link {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(255, 244, 229);
+    transition: text-decoration-color 0.2s, color 0.2s ease;;
+    text-underline-offset: 2px;
+}
+a:hover {
+    text-decoration-color: rgb(23, 135, 255);
+}
+a:active {
+    text-decoration-color: rgb(255, 32, 32);
+    color: rgb(255, 32, 32);
+}
+
+h1:active {
+    color: rgb(255, 32, 32);
+}
+
+.hover-underline {
+    position: relative;
+    text-decoration: none;
+    color: blanchedalmond;
+    transition: color 0.2s ease;
+}
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 45%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blanchedalmond;
+    transform: scaleX(0); /* set initial scale = 0 */
+    transition: transform 0.2s ease;
+}
+.hover-underline:hover::after {
+    transform: scaleX(1); /* scale to 1 when hover */
+}
+.hover-underline:active::after {
+    background-color: rgb(255, 32, 32);
+    transform: scaleX(1.1);
+}
+
+/* ul {
+    list-style: none;    get rid of dot
+    padding: 0;       get rid of defualt padding
+} */
+ul li {
+    margin-bottom: 6px;
+}
+/* prevent excessive whitespace at the bottom. */
+ul li:last-child {
+    margin-bottom: 0;
+}
