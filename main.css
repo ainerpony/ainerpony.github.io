@@ -153,7 +153,7 @@ a, h1, p, li {
 }
 .img-pfp:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4)) brightness(1.25);
 }
 .img-pfp:active {
     transform: scale(0.95);
@@ -168,6 +168,7 @@ img {
 }
 img:hover {
     transform: scale(1.4);
+    filter: brightness(1.25);
 }
 img:active {
     transform: scale(1.15);
