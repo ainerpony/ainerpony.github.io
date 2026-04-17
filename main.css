@@ -3,9 +3,9 @@
     src: url(fonts/Jost-Regular.ttf);
 }
 @property --glow-color {
-  syntax: '<color>';
-  initial-value: transparent;
-  inherits: false;
+    syntax: '<color>';
+    initial-value: transparent;
+    inherits: false;
 }
 @keyframes fadeUp {
     from {
@@ -69,7 +69,6 @@ body {
 .card {
     margin: 34px auto 0;
     width: 100%;
-    max-width: 620px;
     max-width: 300px;
     padding: 28px 28px 24px;
     text-align: center;
@@ -100,6 +99,8 @@ body {
         rgba(38, 182, 175, 0.9),
         transparent
     );
+    animation: scaleUp 0.4s ease both;
+    animation-delay: 0.1s;
 }
 
 .card::after {
@@ -116,6 +117,17 @@ body {
         transparent 70%
     );
     pointer-events: none;
+
+    offset-path: ellipse(52% 50% at center);
+    animation: moveAround 48s linear infinite;
+}
+@keyframes moveAround {
+    from {
+        offset-distance: 12%;
+    }
+    to {
+        offset-distance: 112%;
+    }
 }
 
 .accent-bar {
@@ -219,7 +231,7 @@ a:active {
     transform: scaleX(1);
     transition: transform 0.2s ease, --glow-color 0.2s ease-in-out;
     animation: scaleUp 0.8s ease both;
-    animation-delay: 0.2s;
+    animation-delay: 0.3s;
 }
 .hover-underline:hover::after {
     transform: scaleX(1.1);
