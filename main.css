@@ -89,15 +89,6 @@ body {
     opacity: 0.05;
 }
 
-.orb2 {
-    width: 380px;
-    height: 380px;
-    background: #3a2a6e;
-    bottom: -100px;
-    left: -100px;
-    opacity: 0.1;
-}
-
 .card {
     margin: 34px auto 0;
     width: 100%;
