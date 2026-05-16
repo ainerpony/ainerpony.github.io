@@ -66,6 +66,38 @@ body {
     font-weight: 500;
 }
 
+.bg-orbs {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.18;
+}
+
+.orb1 {
+    width: 480px;
+    height: 480px;
+    background: #1379c8;
+    top: -120px;
+    right: -120px;
+    opacity: 0.05;
+}
+
+.orb2 {
+    width: 380px;
+    height: 380px;
+    background: #3a2a6e;
+    bottom: -100px;
+    left: -100px;
+    opacity: 0.1;
+}
+
 .card {
     margin: 34px auto 0;
     width: 100%;
