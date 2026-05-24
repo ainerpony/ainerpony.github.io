@@ -131,8 +131,8 @@ body {
     position: absolute;
     bottom: -80px;
     right: -80px;
-    width: 220px;
-    height: 220px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     background: radial-gradient(
         circle,
@@ -140,6 +140,7 @@ body {
         transparent 70%
     );
     pointer-events: none;
+    filter: brightness(1.5);
 
     offset-path: ellipse(52% 50% at center);
     animation: moveAround 48s linear infinite;
