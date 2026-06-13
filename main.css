@@ -182,18 +182,22 @@ a, h1, p, li {
 
 .img-pfp {
     width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--border-subtle, rgba(255, 255, 255, .06));
     vertical-align: -3px;
-    transform: scale(1);
-    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
-    transition: transform 0.2s ease, filter 0.2s ease;
+    transition: filter 0.2s ease, border-width 0.3s ease, border-color var(--transition-med, .3s ease),box-shadow var(--transition-med, .3s ease),transform var(--transition-med, .3s ease)
 }
 .img-pfp:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4)) brightness(1.25);
+    transform: scale(1.03);
+    filter: brightness(1.25);
+    border-color: var(--accent, rgb(122, 155, 255));
+    box-shadow: 0 0 24px var(--accent-glow, rgba(0, 68, 255, 0.8));
 }
 .img-pfp:active {
     transform: scale(0.95);
-    filter: drop-shadow(0 0 1px rgba(255, 248, 223, 0.75));
+    filter: brightness(1.50);
+    border-color: var(--accent, rgb(134, 164, 255));
+    box-shadow: 0 0 50px var(--accent-glow, rgba(15, 79, 255, 0.8));
 }
 
 img {
