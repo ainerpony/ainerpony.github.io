@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="main.css">
   </head>
 
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.card', '.hover-underline').forEach(card => {
+        card.style.setProperty('--anim-state', 'running');
+      });
+    });
+  </script>
+
   <body>
     <div class="bg-orbs">
       <div class="orb orb1"></div>

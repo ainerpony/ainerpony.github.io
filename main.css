@@ -106,6 +106,7 @@ body {
     backdrop-filter: blur(22px);
     -webkit-backdrop-filter: blur(22px);
     animation: fadeUp 0.9s ease both;
+    animation-play-state: var(--anim-state, paused);
 }
 
 .card::before {
@@ -124,6 +125,7 @@ body {
     );
     animation: scaleUp 0.4s ease both;
     animation-delay: 0.1s;
+    animation-play-state: var(--anim-state, paused);
 }
 
 .card::after {
@@ -144,6 +146,7 @@ body {
 
     offset-path: ellipse(52% 50% at center);
     animation: moveAround 48s linear infinite;
+    animation-play-state: var(--anim-state, paused);
 }
 @keyframes moveAround {
     from {
@@ -260,6 +263,7 @@ a:active {
     transition: transform 0.2s ease, --glow-color 0.2s ease-in-out;
     animation: scaleUp 0.8s ease both;
     animation-delay: 0.3s;
+    animation-play-state: var(--anim-state, paused);
 }
 .hover-underline:hover::after {
     transform: scaleX(1.1);
